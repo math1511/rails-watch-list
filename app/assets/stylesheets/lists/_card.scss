@@ -1,0 +1,128 @@
+.lists {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 100px) and (max-width: 768px) {
+  .lists {
+    grid-template-columns: 1fr;
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 767px) and (max-width: 992px) {
+  .lists {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.container-list {
+  display: grid;
+  flex-grow: 1;
+  text-align: center;
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 3%;
+  margin-bottom: 3%;
+}
+
+.list-card {
+  display: flex;
+  height: 200px;
+  width: 90%;
+  margin: 4%;
+  padding: 2%;
+  background-color: hsl(0, 0%, 98%);
+  background-position: center;
+  background-size: cover;
+  justify-content: center;
+  align-items: flex-end;
+  border-radius: 6px;
+  box-shadow: 2px 2px 3px rgba(128, 128, 128, 0.137);
+}
+
+.list-card a {
+  font-size: 60%;
+}
+
+.new-lists {
+  display: grid;
+  flex-grow: 1;
+  margin: 20px;
+  background-color: hsl(0, 0%, 98%);
+  padding: 5%;
+  box-shadow: 2px 2px 3px rgba(128, 128, 128, 0.137);
+  border-radius: 4px;
+  text-align: center;
+  width: 50%;
+  margin: 0 auto;
+  margin-top: 4%;
+  margin-bottom: 4%;
+}
+
+@media (min-width: 100px) and (max-width: 790px) {
+  .new-lists {
+    grid-template-columns: 1fr;
+    width: 90%;
+    h1 {
+          font-size: 200%;
+    }
+  }
+}
+
+.new-list {
+  justify-self: center
+}
+
+.list-text {
+  display: flex;
+  justify-content: space-between;
+  padding: 3%;
+  padding-bottom: 0;
+}
+
+.list-text a {
+  color: white;
+}
+
+@media (max-width: 950px) {
+  .list-text a {
+    font-size: 60%;
+  }
+}
+
+.list-text h3 {
+  font-size: 160%;
+}
+
+@media (max-width: 950px) {
+  .list-text h3 {
+    font-size: 90%;
+  }
+}
+
+.new-list a {
+  color: black;
+}
+
+.new-bookmarks {
+  display: grid;
+  flex-grow: 1;
+  margin: 20px;
+  background-color: hsl(0, 0%, 98%);
+  padding: 5%;
+  box-shadow: 2px 2px 3px rgba(128, 128, 128, 0.137);
+  border-radius: 4px;
+  text-align: center;
+  width: 50%;
+  margin: 0 auto;
+}
+
+.new-bookmark {
+  justify-self: center
+}
+
+.new-bookmark a {
+  color: black;
+}
