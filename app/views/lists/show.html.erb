@@ -1,19 +1,19 @@
-<div class="banner-list" style="background-image: url('<%= cl_image_path(@list.photo.key) if @list.photo.attached? %>')">
+<div class="banner-list" style="background-image: url('https://media.istockphoto.com/photos/movie-theater-during-the-screening-of-an-animated-movie-picture-id1355176914?b=1&k=20&m=1355176914&s=170667a&w=0&h=WeepjIiEeDLrh96JafSgOZd1eCIES5mwPO-FbHaWURk=')">
 <h3><%= @list.name %></h3>
-<%= link_to 'Add a movie', new_movie_path(@movie), class: "btn btn-success"  %>
+<%# <%= link_to 'Add a movie', new_movie_path(@movie), class: "btn btn-success"  %>
 </div>
 
 
 <div class="movie-cards">
   <div class="list-text">
     <h3>My Bookmarks</h3>
-    <%= link_to 'Create a bookmark', new_list_bookmark_path(@list), class: "btn btn-success"  %>
+    <%= link_to 'Add a Movie', new_list_bookmark_path(@list), class: "btn btn-success"  %>
   </div>
   <div class="movie-card">
-      <% @bookmarks.each do |bookmark| %>
-        <div class="list-group-item">
-          <%= image_tag bookmark.movie.poster_url, class:"poster-img" %>
-          <div class="movie-card-text">
+    <% @bookmarks.each do |bookmark| %>
+      <div class="list-group-item">
+        <%= image_tag bookmark.movie.poster_url, class:"poster-img" %>
+        <div class="movie-card-text">
             <h4><strong><%= bookmark.movie.title %> • <%= bookmark.movie.rating %><i class="fas fa-star star-yellow"></i></strong></h4>
             <p><%= bookmark.movie.overview %></p>
             <h4><em>"<%= bookmark.comment %>"</em></h4>
@@ -21,16 +21,17 @@
             <div class="show-delete">
               <%= link_to "See more", movie_path(bookmark.movie) %>
               <%= link_to "Delete",
-                            bookmark_path(bookmark),
-                            method: :delete,
-                            data: { confirm: "Are you sure?" } %>
+              bookmark_path(bookmark),
+              method: :delete,
+              data: { confirm: "Are you sure?" } %>
             </div>
           </div>
-        </div>
-      <% end %>
+      </div>
+    <% end %>
   </div>
   <%= button_to "Delete list",
-                        list_path(@list),
-                        method: :delete,
-                        data: { confirm: "Are you sure?" }, class: "btn btn-success" %>
+  list_path(@list),
+  method: :delete,
+  data: { confirm: "Are you sure?" },
+  class: "btn btn-danger" %>
 </div>

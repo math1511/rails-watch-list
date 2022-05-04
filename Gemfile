@@ -55,3 +55,5 @@ gem "simple_form", github: "heartcombo/simple_form"
 
 gem "rest-client"
 gem 'faker', :git => 'https://github.com/faker-ruby/faker.git', :branch => 'master'
+
+gem "image_processing", ">= 1.2"

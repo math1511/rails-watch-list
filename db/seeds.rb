@@ -22,5 +22,5 @@ end
 List.destroy_all
 file = URI.open('https://images.unsplash.com/photo-1592724217096-618c2d580826?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8ZHJhbWF8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60')
 list = List.new(name: 'Drama')
-list.photo.attach(io: file, filename: 'drama.png', content_type: 'image/png')
 list.save
+puts list
