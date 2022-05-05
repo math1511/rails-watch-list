@@ -57,3 +57,5 @@ gem "rest-client"
 gem 'faker', :git => 'https://github.com/faker-ruby/faker.git', :branch => 'master'
 
 gem "image_processing", ">= 1.2"
+
+gem 'dotenv-rails', groups: [:development, :test]
